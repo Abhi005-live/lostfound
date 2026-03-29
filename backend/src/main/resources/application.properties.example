@@ -1,0 +1,23 @@
+spring.application.name=lostfound
+
+# Supabase PostgreSQL Database
+spring.datasource.url=jdbc:postgresql://db.<YOUR-PROJECT-REF>.supabase.co:5432/postgres
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.username=postgres
+spring.datasource.password=<YOUR-DB-PASSWORD>
+
+# JPA
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# Supabase Storage
+supabase.url=https://<YOUR-PROJECT-REF>.supabase.co
+supabase.anon-key=<YOUR-ANON-KEY>
+supabase.bucket=item-images
+
+# Logging
+logging.config=classpath:logback-spring.xml
+logging.level.root=INFO
+logging.level.lostofound=DEBUG
+logging.file.name=logs/lostfound.log

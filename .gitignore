@@ -1,0 +1,12 @@
+# Backend
+backend/target/
+backend/data/
+backend/logs/
+backend/hs_err_*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Secrets - DO NOT COMMIT
+backend/src/main/resources/application.properties
