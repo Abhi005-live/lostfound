@@ -32,6 +32,7 @@ function Navbar() {
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/report-lost">Report Lost</Link>
         <Link to="/report-found">Report Found</Link>
+        <Link to="/my-reports">My Reports</Link>
         {user?.role === "admin" && (
           <Link to="/admin" style={{ color: "#f59e0b", fontWeight: 700 }}>⚙ Admin</Link>
         )}
@@ -62,6 +63,9 @@ function Navbar() {
               </button>
               <button className="dropdown-item" onClick={() => { setOpen(false); navigate("/report-found") }}>
                 📦 Report Found
+              </button>
+              <button className="dropdown-item" onClick={() => { setOpen(false); navigate("/my-reports") }}>
+                📋 My Reports
               </button>
               <button className="dropdown-item danger" onClick={handleLogout}>
                 🚪 Logout

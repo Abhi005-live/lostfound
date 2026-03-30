@@ -8,6 +8,8 @@ import ReportFound from "./pages/ReportFound"
 import ItemDetails from "./pages/ItemDetails"
 import Admin from "./pages/Admin"
 import Chat from "./pages/Chat"
+import MyReports from "./pages/MyReports"
+import MyChats from "./pages/MyChats"
 
 function PrivateRoute({ children }) {
   const user = localStorage.getItem("user")
@@ -37,6 +39,8 @@ function App() {
         <Route path="/report-found" element={<PrivateRoute><ReportFound /></PrivateRoute>} />
         <Route path="/item/:id" element={<PrivateRoute><ItemDetails /></PrivateRoute>} />
         <Route path="/chat/:itemId/:receiverId" element={<PrivateRoute><Chat /></PrivateRoute>} />
+        <Route path="/my-reports" element={<PrivateRoute><MyReports /></PrivateRoute>} />
+        <Route path="/my-chats/:itemId" element={<PrivateRoute><MyChats /></PrivateRoute>} />
         <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
