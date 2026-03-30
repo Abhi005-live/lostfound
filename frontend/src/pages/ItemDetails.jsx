@@ -87,7 +87,7 @@ function ItemDetails() {
 
           <div className="detail-body">
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-              <h2 style={{ margin: 0 }}>{item.title}</h2>
+              <h2 style={{ margin: 0 }}>{item.title || "Untitled Item"}</h2>
               <span className={`badge badge-${item.type}`}>
                 {item.type === "lost" ? "● Lost" : "● Found"}
               </span>

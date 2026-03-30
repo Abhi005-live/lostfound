@@ -52,12 +52,12 @@ function ReportLost() {
 
           <div className="form-group">
             <label>Item Name <span className="optional-tag">optional</span></label>
-            <input type="text" placeholder="e.g. Black wallet, iPhone 14, Keys..." value={title} onChange={e => setTitle(e.target.value)} />
+            <input type="text" placeholder="e.g. Black wallet, iPhone 14, Keys..." value={title} onChange={e => setTitle(e.target.value)} maxLength={100} />
           </div>
 
           <div className="form-group">
             <label>Description <span className="optional-tag">optional</span></label>
-            <textarea placeholder="Color, brand, size, distinguishing features..." value={description} onChange={e => setDescription(e.target.value)} />
+            <textarea placeholder="Color, brand, size, distinguishing features..." value={description} onChange={e => setDescription(e.target.value)} maxLength={500} />
           </div>
 
           <div className="form-group">

@@ -18,8 +18,8 @@ function ItemCard({ item }) {
       </div>
 
       <div className="item-card-body">
-        <div className="item-card-title">{title}</div>
-        {description && <p className="item-card-desc">{description}</p>}
+        <div className="item-card-title">{title || "Untitled Item"}</div>
+        <p className="item-card-desc">{description || <em style={{ color: "var(--text-light)" }}>No description provided</em>}</p>
         <div className="item-card-meta">
           {location && <span>📍 {location}</span>}
           {date && <span>📅 {date}</span>}

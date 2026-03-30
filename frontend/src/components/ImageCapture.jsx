@@ -71,7 +71,7 @@ function ImageCapture({ image, onChange }) {
       {mode === "idle" && !image && (
         <div className="capture-placeholder">
           <span className="capture-icon">📷</span>
-          <p>Add a photo of the item</p>
+          <p>Take a photo or upload an image of the item</p>
           <div className="capture-actions">
             <button type="button" className="btn btn-outline btn-sm" onClick={() => setMode("camera")}>
               📸 Open Camera

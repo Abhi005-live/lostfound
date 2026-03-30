@@ -9,7 +9,7 @@ function Login() {
   const navigate = useNavigate()
 
   const handleLogin = async () => {
-    if (!username || !password) return alert("Enter username and password")
+    if (!username.trim() || !password.trim()) return alert("Enter username and password")
     setLoading(true)
     try {
       const res = await API.post("/auth/login", { username, password })

@@ -34,7 +34,7 @@ function Dashboard() {
 
         <div className="page-header">
           <h2>Lost &amp; Found Dashboard</h2>
-          <p>Browse all reported items — most recent first</p>
+          <p>Browse all reported items — most recent first · <strong>{total}</strong> item{total !== 1 ? "s" : ""} total</p>
         </div>
 
         <div className="stats-bar">

@@ -43,11 +43,7 @@ function ReportFound() {
           <h2>Report a Found Item</h2>
           <p>All fields are optional — even just a photo helps!</p>
         </div>
-    <form method = "POST" target = " ">
 
-
-      
-    </form>
         <div className="form-card">
           <div className="form-card-header">
             <h2>🟢 Found Item Report</h2>
@@ -56,12 +52,12 @@ function ReportFound() {
 
           <div className="form-group">
             <label>Item Name <span className="optional-tag">optional</span></label>
-            <input type="text" placeholder="e.g. Samsung phone, Keys with red keychain..." value={title} onChange={e => setTitle(e.target.value)} />
+            <input type="text" placeholder="e.g. Samsung phone, Keys with red keychain..." value={title} onChange={e => setTitle(e.target.value)} maxLength={100} />
           </div>
 
           <div className="form-group">
             <label>Description <span className="optional-tag">optional</span></label>
-            <textarea placeholder="Color, brand, size, distinguishing features..." value={description} onChange={e => setDescription(e.target.value)} />
+            <textarea placeholder="Color, brand, size, distinguishing features..." value={description} onChange={e => setDescription(e.target.value)} maxLength={500} />
           </div>
 
           <div className="form-group">

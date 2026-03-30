@@ -96,6 +96,11 @@ function MapPicker({ coords, onCoordsChange, onAddressChange }) {
             📌 {marker[0].toFixed(4)}, {marker[1].toFixed(4)}
           </span>
         )}
+        {marker && (
+          <button type="button" className="btn btn-ghost btn-sm" onClick={() => { setMarker(null); onCoordsChange(null, null); onAddressChange("") }} title="Clear pin">
+            ✕ Clear
+          </button>
+        )}
       </div>
 
       {open && (

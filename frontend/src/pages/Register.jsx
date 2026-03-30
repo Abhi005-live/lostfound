@@ -9,7 +9,7 @@ function Register() {
   const navigate = useNavigate()
 
   const handleRegister = async () => {
-    if (!username || !password) return alert("Enter username and password")
+    if (!username.trim() || !password.trim()) return alert("Enter username and password")
     setLoading(true)
     try {
       await API.post("/auth/register", { username, password })

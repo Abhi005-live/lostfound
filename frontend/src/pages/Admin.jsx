@@ -130,7 +130,7 @@ function Admin() {
         <div className="page-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div>
             <h2>⚙️ Admin Panel</h2>
-            <p>Manage all items and users</p>
+            <p>Manage all items and users · {items.length} item{items.length !== 1 ? "s" : ""}, {users.length} user{users.length !== 1 ? "s" : ""}</p>
           </div>
           <button className="btn btn-ghost btn-sm" onClick={() => navigate("/dashboard")}>← Dashboard</button>
         </div>

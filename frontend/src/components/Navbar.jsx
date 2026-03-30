@@ -38,7 +38,7 @@ function Navbar() {
       </div>
 
       <div className="navbar-right">
-        <div className="navbar-user" ref={dropdownRef} onClick={() => setOpen(o => !o)}>
+        <div className="navbar-user" ref={dropdownRef} onClick={() => setOpen(o => !o)} title={`Logged in as ${user?.username}`}>
           <div className="avatar">{user?.username?.[0] || "U"}</div>
           <span className="username-label">{user?.username}</span>
           <span style={{ fontSize: 12, color: "var(--text-muted)" }}>▾</span>
@@ -47,7 +47,12 @@ function Navbar() {
             <div className="dropdown">
               <div className="dropdown-header">
                 <p>{user?.username}</p>
-                <p>ID: {user?.id}</p>
+                <p style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <span className={`badge ${user?.role === "admin" ? "badge-lost" : "badge-found"}`} style={{ fontSize: 10 }}>
+                    {user?.role === "admin" ? "⚙️ Admin" : "👤 User"}
+                  </span>
+                  ID: {user?.id}
+                </p>
               </div>
               <button className="dropdown-item" onClick={() => { setOpen(false); navigate("/dashboard") }}>
                 📋 Dashboard
